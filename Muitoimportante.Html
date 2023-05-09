@@ -1,1 +1,67 @@
 
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Botões de Sim e Não</title>	<style>
+
+		button {
+
+			position: absolute;
+
+			top: 50%;
+
+			left: 50%;
+
+			transform: translate(-50%, -50%);
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<h2>vai me dá o cuzinho hoje?</h2>
+
+	<button id="sim_button">Sim</button>
+
+	<button id="nao_button">Não</button>
+
+	<script>
+
+		var naoButton = document.getElementById("nao_button");
+
+		var simButton = document.getElementById("sim_button");
+
+		var body = document.querySelector("body");
+
+		naoButton.addEventListener("click", function(){
+
+			var randomX = Math.floor(Math.random() * (body.clientWidth - naoButton.clientWidth));
+
+			var randomY = Math.floor(Math.random() * (body.clientHeight - naoButton.clientHeight));
+
+			naoButton.style.left = randomX + "px";
+
+			naoButton.style.top = randomY + "px";
+
+		});
+
+		simButton.addEventListener("click", function(){
+
+			alert("boa menina!");
+
+		});
+
+	</script>
+
+</body>
+
+</html>
+
